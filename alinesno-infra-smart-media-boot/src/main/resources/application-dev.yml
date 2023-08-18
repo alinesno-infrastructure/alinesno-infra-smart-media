@@ -1,0 +1,10 @@
+server:
+  port: 30303
+
+# spring 配置
+spring:
+  application:
+    name: alinesno-infra-smart-media-boot
+  devtools:
+    restart:
+      enabled: true
