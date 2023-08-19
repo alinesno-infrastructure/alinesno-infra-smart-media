@@ -1,0 +1,114 @@
+2023-08-19T13:42:05.666+08:00  INFO 24975 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Starting SmartMediaApplication using Java 17.0.1 with PID 24975 (/Users/luodong/GitRepository/alinesno-infra-smart-media/alinesno-infra-smart-media-boot/target/classes started by luodong in /Users/luodong/GitRepository/alinesno-infra-smart-media)
+2023-08-19T13:42:05.670+08:00 DEBUG 24975 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-19T13:42:05.672+08:00  INFO 24975 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : The following 5 profiles are active: "base", "security", "mybatis", "sa-token", "dev"
+2023-08-19T13:42:05.740+08:00  INFO 24975 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-19T13:42:05.741+08:00  INFO 24975 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-19T13:42:07.488+08:00  INFO 24975 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-19T13:42:07.494+08:00  INFO 24975 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-19T13:42:07.539+08:00  INFO 24975 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-08-19T13:42:07.741+08:00  WARN 24975 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.alinesno.infra.smart.media]' package. Please check your configuration.
+2023-08-19T13:42:09.210+08:00  WARN 24975 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-19T13:42:09.260+08:00  INFO 24975 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-19T13:42:09.261+08:00  INFO 24975 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3519 ms
+2023-08-19T13:42:10.235+08:00  INFO 24975 --- [restartedMain] org.redisson.Version                     : Redisson 3.20.1
+2023-08-19T13:42:10.321+08:00  WARN 24975 --- [restartedMain] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-19T13:42:10.711+08:00  INFO 24975 --- [redisson-netty-2-4] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:42:11.046+08:00  INFO 24975 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:42:11.307+08:00  WARN 24975 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: com.clickhouse.jdbc.ClickHouseDriver
+2023-08-19T13:42:11.354+08:00  INFO 24975 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-19T13:42:11.393+08:00 ERROR 24975 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: com.clickhouse.jdbc.ClickHouseDriver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:659)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.alinesno.infra.smart.media.SmartMediaApplication.main(SmartMediaApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: com.clickhouse.jdbc.ClickHouseDriver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: com.clickhouse.jdbc.ClickHouseDriver
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 25 common frames omitted
+
+2023-08-19T13:44:17.601+08:00  INFO 25144 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Starting SmartMediaApplication using Java 17.0.1 with PID 25144 (/Users/luodong/GitRepository/alinesno-infra-smart-media/alinesno-infra-smart-media-boot/target/classes started by luodong in /Users/luodong/GitRepository/alinesno-infra-smart-media)
+2023-08-19T13:44:17.607+08:00 DEBUG 25144 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-19T13:44:17.611+08:00  INFO 25144 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : The following 5 profiles are active: "base", "security", "mybatis", "sa-token", "dev"
+2023-08-19T13:44:17.798+08:00  INFO 25144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-19T13:44:17.799+08:00  INFO 25144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-19T13:44:21.122+08:00  INFO 25144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-19T13:44:21.130+08:00  INFO 25144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-19T13:44:21.202+08:00  INFO 25144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-19T13:44:21.541+08:00  WARN 25144 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.alinesno.infra.smart.media]' package. Please check your configuration.
+2023-08-19T13:44:24.121+08:00  WARN 25144 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-19T13:44:24.182+08:00  INFO 25144 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-19T13:44:24.184+08:00  INFO 25144 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6383 ms
+2023-08-19T13:44:25.948+08:00  INFO 25144 --- [restartedMain] org.redisson.Version                     : Redisson 3.20.1
+2023-08-19T13:44:26.107+08:00  WARN 25144 --- [restartedMain] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-19T13:44:26.780+08:00  INFO 25144 --- [redisson-netty-2-4] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:44:27.153+08:00  INFO 25144 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:44:29.377+08:00  INFO 25144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-19T13:44:29.392+08:00  INFO 25144 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-19T13:44:29.586+08:00  INFO 25144 --- [restartedMain] io.undertow                              : starting server: Undertow - 2.3.7.Final
+2023-08-19T13:44:29.619+08:00  INFO 25144 --- [restartedMain] org.xnio                                 : XNIO version 3.8.8.Final
+2023-08-19T13:44:29.650+08:00  INFO 25144 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2023-08-19T13:44:29.862+08:00  INFO 25144 --- [restartedMain] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2023-08-19T13:44:29.988+08:00  INFO 25144 --- [restartedMain] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 30303 (http)
+2023-08-19T13:44:30.044+08:00  INFO 25144 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Started SmartMediaApplication in 14.7 seconds (process running for 16.851)
+2023-08-19T13:44:35.224+08:00  INFO 25144 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.7.Final
+2023-08-19T13:55:28.435+08:00  INFO 25882 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Starting SmartMediaApplication using Java 17.0.1 with PID 25882 (/Users/luodong/GitRepository/alinesno-infra-smart-media/alinesno-infra-smart-media-boot/target/classes started by luodong in /Users/luodong/GitRepository/alinesno-infra-smart-media)
+2023-08-19T13:55:28.438+08:00 DEBUG 25882 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-19T13:55:28.439+08:00  INFO 25882 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : The following 5 profiles are active: "base", "security", "mybatis", "sa-token", "dev"
+2023-08-19T13:55:28.503+08:00  INFO 25882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-19T13:55:28.503+08:00  INFO 25882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-19T13:55:29.770+08:00  INFO 25882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-19T13:55:29.774+08:00  INFO 25882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-19T13:55:29.806+08:00  INFO 25882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-08-19T13:55:29.978+08:00  WARN 25882 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.alinesno.infra.smart.media]' package. Please check your configuration.
+2023-08-19T13:55:31.176+08:00  WARN 25882 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-19T13:55:31.199+08:00  INFO 25882 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-19T13:55:31.200+08:00  INFO 25882 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2695 ms
+2023-08-19T13:55:31.930+08:00  INFO 25882 --- [restartedMain] org.redisson.Version                     : Redisson 3.20.1
+2023-08-19T13:55:32.000+08:00  WARN 25882 --- [restartedMain] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-08-19T13:55:32.269+08:00  INFO 25882 --- [redisson-netty-2-5] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:55:32.378+08:00  INFO 25882 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-19T13:55:33.117+08:00  INFO 25882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-19T13:55:33.122+08:00  INFO 25882 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-19T13:55:33.194+08:00  INFO 25882 --- [restartedMain] io.undertow                              : starting server: Undertow - 2.3.7.Final
+2023-08-19T13:55:33.206+08:00  INFO 25882 --- [restartedMain] org.xnio                                 : XNIO version 3.8.8.Final
+2023-08-19T13:55:33.219+08:00  INFO 25882 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2023-08-19T13:55:33.293+08:00  INFO 25882 --- [restartedMain] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2023-08-19T13:55:33.345+08:00  INFO 25882 --- [restartedMain] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 30303 (http)
+2023-08-19T13:55:33.366+08:00  INFO 25882 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Started SmartMediaApplication in 5.663 seconds (process running for 6.631)

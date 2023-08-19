@@ -13,6 +13,11 @@
 	<artifactId>alinesno-infra-smart-media-boot</artifactId>
 	<packaging>jar</packaging>
 
+	<properties>
+		<!-- clickhouse配置 -->
+		<clickhouse.jdbc.version>0.3.2</clickhouse.jdbc.version>
+	</properties>
+
 	<dependencies>
 
         <!-- 引用服务 -->
@@ -30,6 +35,13 @@
 			<groupId>com.alinesno.infra.smart</groupId>
 			<artifactId>alinesno-infra-smart-media-api</artifactId>
 			<version>${revision}</version>
+		</dependency>
+
+		<!--clickhouse-->
+		<dependency>
+			<groupId>com.clickhouse</groupId>
+			<artifactId>clickhouse-jdbc</artifactId>
+			<version>${clickhouse.jdbc.version}</version>
 		</dependency>
 
 		<dependency>
