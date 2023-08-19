@@ -112,3 +112,4 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.clickh
 2023-08-19T13:55:33.293+08:00  INFO 25882 --- [restartedMain] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
 2023-08-19T13:55:33.345+08:00  INFO 25882 --- [restartedMain] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 30303 (http)
 2023-08-19T13:55:33.366+08:00  INFO 25882 --- [restartedMain] c.a.i.smart.media.SmartMediaApplication  : Started SmartMediaApplication in 5.663 seconds (process running for 6.631)
+2023-08-19T14:29:47.652+08:00  INFO 25882 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.7.Final
