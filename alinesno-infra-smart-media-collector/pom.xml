@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+    	<groupId>com.alinesno.infra.smart</groupId>
+    	<artifactId>alinesno-infra-smart-media-parent</artifactId>
+		<version>${revision}</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>alinesno-infra-smart-media-collector</artifactId>
+	<packaging>jar</packaging>
+
+	<dependencies>
+
+		<!-- 引用公共门面服务 -->
+		<dependency>
+			<groupId>com.alinesno.infra.common</groupId>
+			<artifactId>alinesno-infra-common-facade</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openpnp</groupId>
+			<artifactId>opencv</artifactId>
+			<version>4.7.0-0</version>
+		</dependency>
+
+		<!-- kafka -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.11</artifactId>
+			<version>0.10.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<!-- gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+		<!-- commons-lang -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
