@@ -1,5 +1,8 @@
 package com.alinesno.infra.smart.media.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -11,35 +14,22 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * @version 1.0.0
  */
 @TableName("media_files")
+@Data
 public class MediaFilesEntity extends InfraBaseEntity {
 
     /**
      * 文件的名称
      */
     @TableField("file_name")
+	@ColumnType(length=255)
+	@ColumnComment("文件的名称")
     private String fileName;
 
     /**
      * 文件的路径
      */
     @TableField("file_path")
+	@ColumnType(length=255)
+	@ColumnComment("文件的路径")
     private String filePath;
-
-    // 省略 getter 和 setter 方法
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public String getFilePath() {
-        return filePath;
-    }
-
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
-    }
 }
