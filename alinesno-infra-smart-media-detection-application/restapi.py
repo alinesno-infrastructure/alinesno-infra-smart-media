@@ -22,9 +22,6 @@ def predict(model):
         return
 
     if request.files.get('image'):
-        # Method 1
-        # with request.files["image"] as f:
-        #     im = Image.open(io.BytesIO(f.read()))
 
         # Method 2
         im_file = request.files['image']
@@ -45,4 +42,4 @@ if __name__ == '__main__':
     for m in opt.model:
         models[m] = torch.hub.load('ultralytics/yolov5', m, force_reload=True, skip_validation=True)
 
-    app.run(host='0.0.0.0', port=opt.port)  # debug=True causes Restarting with stat
+    app.run(host='0.0.0.0', port=5001)  # debug=True causes Restarting with stat
