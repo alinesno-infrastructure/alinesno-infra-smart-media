@@ -74,4 +74,4 @@ jobs:
 
             export INFRA_DEV_DOMAIN=${{ secrets.INFRA_BETA_AI_DOMAIN }}
 
-            envsubst < /home/github-action/${{ env.PROJECT_NAME }}/kubernetes-embedding-${{ env.CURRENT_PROFIRE }}.yml | kubectl apply -f -
+            envsubst < /home/github-action/${{ env.PROJECT_NAME }}/kubernetes-detection-${{ env.CURRENT_PROFIRE }}.yml | kubectl apply -f -
