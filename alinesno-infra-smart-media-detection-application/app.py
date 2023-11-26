@@ -2,6 +2,8 @@
 Object Detection API using YOLOv5 models with Flask
 """
 
+import os
+import requests
 import torch
 from flask import Flask, request
 from PIL import Image
@@ -11,6 +13,29 @@ app = Flask(__name__)
 models = {}
 
 DETECTION_URL = '/v1/object-detection/<model>'  # 检测请求URL模板
+
+def download_models():
+    """
+    从七牛下载模型文件到 app/models 目录
+    """
+    model_urls = [
+        'http://data.linesno.com/models/yolov5l.pt',
+        'http://data.linesno.com/models/yolov5m.pt',
+        'http://data.linesno.com/models/yolov5s.pt'
+    ]
+
+    models_dir = 'app/models'
+
+    if not os.path.exists(models_dir):
+        os.makedirs(models_dir)
+
+    for url in model_urls:
+        filename = os.path.join(models_dir, os.path.basename(url))
+        if not os.path.exists(filename):
+            response = requests.get(url)
+            with open(filename, 'wb') as file:
+                file.write(response.content)
+            print(f"Downloaded {filename}")
 
 @app.route(DETECTION_URL, methods=['POST'])
 def predict(model):
@@ -30,6 +55,9 @@ def predict(model):
             return results.pandas().xyxy[0].to_json(orient='records')
 
 if __name__ == '__main__':
+
+    download_models()
+
     # 手动加载本地模型
     model_paths = {
         'yolov5s': 'models/yolov5s.pt',

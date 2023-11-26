@@ -6,7 +6,6 @@ WORKDIR /app
 
 # 复制所需文件到容器中
 COPY requirements.txt app.py ./
-COPY models/ models/
 
 # 安装依赖包
 RUN pip install --no-cache-dir -r requirements.txt
