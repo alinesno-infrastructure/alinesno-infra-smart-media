@@ -19,8 +19,9 @@ def download_models():
     从七牛下载模型文件到 app/models 目录
     """
     model_urls = [
-        'http://data.linesno.com/models/yolov5l.pt',
+        'http://data.linesno.com/models/fire-smoke5s.pt',
         'http://data.linesno.com/models/yolov5m.pt',
+        'http://data.linesno.com/models/yolov5s.pt',
         'http://data.linesno.com/models/yolov5s.pt'
     ]
 
