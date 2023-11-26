@@ -62,6 +62,7 @@ if __name__ == '__main__':
     # 手动加载本地模型
     model_paths = {
         'yolov5s': 'models/yolov5s.pt',
+        'fire-smoke5s': 'models/fire-smoke5s.pt',
         'yolov5m': 'models/yolov5m.pt',
         'yolov5l': 'models/yolov5l.pt',
     }
