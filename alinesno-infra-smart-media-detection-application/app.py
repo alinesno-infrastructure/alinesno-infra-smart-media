@@ -24,7 +24,7 @@ def download_models():
         'http://data.linesno.com/models/yolov5s.pt'
     ]
 
-    models_dir = 'app/models'
+    models_dir = 'models'
 
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
