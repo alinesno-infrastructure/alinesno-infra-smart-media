@@ -20,9 +20,9 @@ def download_models():
     """
     model_urls = [
         'http://data.linesno.com/models/fire-smoke5s.pt',
-        'http://data.linesno.com/models/yolov5m.pt',
         'http://data.linesno.com/models/yolov5s.pt',
-        'http://data.linesno.com/models/yolov5s.pt'
+        'http://data.linesno.com/models/yolov5m.pt',
+        'http://data.linesno.com/models/yolov5l.pt'
     ]
 
     models_dir = 'models'
@@ -62,9 +62,9 @@ if __name__ == '__main__':
     # 手动加载本地模型
     model_paths = {
         'yolov5s': 'models/yolov5s.pt',
-        'fire-smoke5s': 'models/fire-smoke5s.pt',
         'yolov5m': 'models/yolov5m.pt',
         'yolov5l': 'models/yolov5l.pt',
+        'fire-smoke5s': 'models/fire-smoke5s.pt',
     }
 
     for model_name, model_path in model_paths.items():
