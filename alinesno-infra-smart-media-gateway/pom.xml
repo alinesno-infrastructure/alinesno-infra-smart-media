@@ -10,7 +10,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>alinesno-infra-smart-media-api</artifactId>
+	<artifactId>alinesno-infra-smart-media-gateway</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>

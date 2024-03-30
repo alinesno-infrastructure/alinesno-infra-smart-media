@@ -25,14 +25,14 @@
         <module>alinesno-infra-smart-media-facade</module>  <!-- 接口和引用 -->
         <module>alinesno-infra-smart-media-domain</module>  <!-- 领域服务 -->
         <module>alinesno-infra-smart-media-adapter</module> <!-- 适配层 -->
-        <module>alinesno-infra-smart-media-api</module>  <!-- 接口服务 -->
+        <module>alinesno-infra-smart-media-gateway</module>  <!-- 接口服务 -->
         <module>alinesno-infra-smart-media-client</module>  <!-- 对外引用 -->
         <module>alinesno-infra-smart-media-boot</module>  <!-- 启动服务 -->
 
         <module>alinesno-infra-smart-media-collector</module>  <!-- 流媒体数据解析采集 -->
 
         <!-- 前端服务
-        <module>alinesno-infra-smart-media-admin</module>
+        <module>alinesno-infra-smart-media-ui</module>
         -->
     </modules>
 
