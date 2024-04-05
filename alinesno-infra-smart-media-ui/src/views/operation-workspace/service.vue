@@ -35,7 +35,7 @@
           </div>
           <div class="panel-body acp-height-auto">
             <ul class="panel-item-text">
-              <li style="width:23%;padding:4px;border-bottom: 0px;" v-for="item in opertionAssets" :key="item.id">
+              <li style="width:31%;padding:4px;border-bottom: 0px;" v-for="item in opertionAssets" :key="item.id">
                 <div class="item-health-box">
                   <div class="item-health-title">{{ item.title }}</div>
                   <div class="item-health-count">{{ item.count }}</div>
@@ -60,7 +60,6 @@ const opertionAssets = ref([
   {id:'1' , title:'运维脚本' , count:45} ,
   {id:'2' , title:'服务资源' , count:145} ,
   {id:'3' , title:'持续集成' , count:65} ,
-  {id:'4' , title:'自动配置' , count:85} ,
   {id:'5' , title:'配置管理' , count:45} ,
   {id:'6' , title:'安全监控' , count:45} ,
 ])

@@ -9,10 +9,10 @@ spring:
     restart:
       enabled: true
   datasource:
-    driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
-    url: jdbc:clickhouse://127.0.0.1:8123/default?rewriteBatchedStatements=true
-    username: default
-    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_smart_media_v100?characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowMultiQueries=true
+    username: root
+    password: adminer
     hikari:
       connection-timeout: 20000
       minimum-idle: 10
@@ -28,6 +28,18 @@ spring:
     bootstrap-servers: 192.168.101.18:9092
     consumer:
       group-id: infra_logback
+
+actable:
+  table:
+    auto: update
+  model:
+    pack: com.alinesno.infra.smart.media.entity
+  database:
+    type: mysql
+  index:
+    prefix: alinesno_smart_media_idx_
+  unique:
+    prefix: alinesno_smart_media_uni_
 
 # sa-token配置
 sa-token:
