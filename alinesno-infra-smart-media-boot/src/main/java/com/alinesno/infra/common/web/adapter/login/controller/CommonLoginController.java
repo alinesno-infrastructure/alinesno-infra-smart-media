@@ -134,25 +134,25 @@ public class CommonLoginController {
                 new Menu("Dashboard", "index", false, false , "dashboard", new Menu.Meta("概览", "dashboard", false, null))
         ));
 
-        Menu systemMenu = new Menu("System", "/system", false, "noRedirect", "Layout", true, new Menu.Meta("接口服务", "post", false, null),
+        Menu systemMenu = new Menu("Analyse", "/analyse", false, "noRedirect", "Layout", true, new Menu.Meta("接口服务", "post", false, null),
                 List.of(
-                        new Menu("Group", "system/group/index", false,false,  "system/group/index", new Menu.Meta("视频分析", "tree", false, null)),
-                        new Menu("User", "system/user/index", false,false,  "system/user/index", new Menu.Meta("行为分析", "user", false, null)),
-                        new Menu("Dept", "system/dept/index", false,false,  "system/dept/index", new Menu.Meta("人流分析", "tree", false, null)),
-                        new Menu("Role", "system/role/index", false, false, "system/role/index", new Menu.Meta("内容分析", "peoples", false, null))
+                        new Menu("Video", "smart/media/analyse/video/index", false, false, "analyse/video/index", new Menu.Meta("视频分析", "tree", false, null)),
+                        new Menu("Behavior", "smart/media/analyse/behavior/index", false, false, "analyse/behavior/index", new Menu.Meta("行为分析", "user", false, null)),
+                        new Menu("Person", "smart/media/analyse/person/index", false, false, "analyse/person/index", new Menu.Meta("人流分析", "tree", false, null)),
+                        new Menu("Content", "smart/media/analyse/content/index", false, false, "analyse/content/index", new Menu.Meta("内容分析", "peoples", false, null))
                 ));
 
-        Menu loggerMenu = new Menu("Log", "/log", false, "noRedirect", "Layout", true, new Menu.Meta("流媒体接入", "log", false, null),
-                        List.of(
-                                new Menu("Operlog", "monitor/operlog/index", false,false, "monitor/operlog/index", new Menu.Meta("渠道配置", "form", false, null)),
-                                new Menu("Job", "monitor/job/index", false,false, "monitor/job/index", new Menu.Meta("识别算法", "job", false, null)),
-                                new Menu("Operlog", "monitor/apilog/index", false,false, "monitor/apilog/index", new Menu.Meta("分类管理", "form", false, null))
-                        ));
-
-        Menu monitorMenu = new Menu("Monitor", "/monitor", false, "noRedirect", "Layout", true, new Menu.Meta("系统配置", "monitor", false, null),
+        Menu loggerMenu = new Menu("Media", "/media", false, "noRedirect", "Layout", true, new Menu.Meta("流媒体接入", "log", false, null),
                 List.of(
-                        new Menu("Online", "monitor/online/index", false,false, "monitor/online/index", new Menu.Meta("监控通知", "online", false, null)),
-                        new Menu("Server", "monitor/server/index", false,false, "monitor/server/index", new Menu.Meta("媒体存储", "server", false, null))
+                        new Menu("Channel", "smart/media/media/channel/index", false, false, "media/channel/index", new Menu.Meta("渠道配置", "form", false, null)),
+                        new Menu("Algorithm", "smart/media/media/algorithm/index", false, false, "media/algorithm/index", new Menu.Meta("识别算法", "job", false, null)),
+                        new Menu("Catalog", "smart/media/media/catalog/index", false, false, "media/catalog/index", new Menu.Meta("分类管理", "form", false, null))
+                ));
+
+        Menu monitorMenu = new Menu("Config", "/config", false, "noRedirect", "Layout", true, new Menu.Meta("系统配置", "monitor", false, null),
+                List.of(
+                        new Menu("Notice", "smart/media/config/notice/index", false, false, "config/notice/index", new Menu.Meta("监控通知", "online", false, null)),
+                        new Menu("Storage", "smart/media/config/storage/index", false, false, "config/storage/index", new Menu.Meta("媒体存储", "server", false, null))
                 ));
 
         List<Menu> menus = List.of(dashboardMenu , systemMenu , loggerMenu , monitorMenu);
